@@ -1,10 +1,20 @@
+"use client";
+
 import React from 'react';
 import Link from 'next/link';
+import { signOut, useSession } from 'next-auth/react';
+import { Button } from '@/components/ui/button';
 
 export default function Home() {
+
+  const { data } = useSession();
+
+  console.log('Session data:', data);
+
   return (
     <div>
       <h2>Fernboard</h2>
+      <Button onClick={() => signOut()}>Sign out</Button>
     </div>
   );
 }
