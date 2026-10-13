@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
         .returning();
 
         if(result.length === 0) {
-            return NextResponse.json({ error: "User already exists" }, { status: 409 });
+            return NextResponse.json({ message: "User already exists" }, { status: 200 });
         }
 
         return NextResponse.json({ message: "User created successfully", user: result[0] }, { status: 201 });

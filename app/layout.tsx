@@ -1,7 +1,10 @@
 import { AuthProvider } from "@/components/session-provider";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Figtree } from "next/font/google";
+import { Figtree, Inter } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
 const figtree = Figtree({ subsets: ["latin"] });
 
@@ -18,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={cn("font-sans", inter.variable)}>
       <body className={figtree.className} style={{ margin: 0, padding: 0 }}>
         <AuthProvider>{children}</AuthProvider>
       </body>
