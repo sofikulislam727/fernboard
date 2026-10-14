@@ -1,10 +1,14 @@
 "use client"
+import ProjectList from '@/components/custom/dashboard/ProjectList'
+import WelcomeBanner from '@/components/custom/dashboard/WelcomeBanner'
 import React from 'react'
 
 function DashboardPage() {
   return (
     <div>
-      Dashboard Page
+      <WelcomeBanner />
+
+      <ProjectList />
     </div>
   )
 }

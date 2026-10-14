@@ -1,15 +1,26 @@
-# Fernboard
+<h1>
+  <img src="./public/logo.png" alt="Fernboard logo" height="40" style="vertical-align:middle; margin-right:10px;" />
+  Fernboard
+</h1>
 
-![Fernboard logo](./public/logo.png)
+Fernboard is an AI-powered whiteboard for brainstorming, organizing ideas, and turning them into action.
 
-Fernboard is a simple dashboard for organizing and accessing your favorite apps and tools in one place.
+## Features
 
-## What it does
+- Interactive idea board for notes and workflows
+- AI-assisted brainstorming and generation
+- Dashboard for managing projects and ideas
+- Modern UI for fast collaboration and exploration
 
-- Centralizes your frequently used apps and tools
-- Gives you a clean, modern dashboard experience
-- Helps you quickly jump back into your work
-- Built with Next.js for a fast and responsive web app
+## Tech stack
+
+- Next.js
+- React
+- TypeScript
+- PostgreSQL
+- Drizzle ORM
+- NextAuth
+- Inngest
 
 ## Getting started
 
@@ -18,8 +29,38 @@ npm install
 npm run dev
 ```
 
-Then open http://localhost:3000 in your browser.
+Then open:
 
-## Project status
+```text
+http://localhost:3000
+```
 
-This is a simple starter README for Fernboard. It will be expanded with more details, screenshots, and setup instructions later.
+## Environment
+
+Create a `.env.local` file with:
+
+```env
+DATABASE_URL="postgresql://user:password@localhost:5432/fernboard"
+NEXTAUTH_SECRET="your-secret"
+NEXTAUTH_URL="http://localhost:3000"
+GITHUB_CLIENT_ID="your-github-client-id"
+GITHUB_CLIENT_SECRET="your-github-client-secret"
+GOOGLE_CLIENT_ID="your-google-client-id"
+GOOGLE_CLIENT_SECRET="your-google-client-secret"
+INNGEST_EVENT_KEY="your-inngest-key"
+```
+
+## Scripts
+
+```bash
+npm run dev
+npm run build
+npm run lint
+npm run db:push
+npm run db:studio
+npm run inngest:dev
+```
+
+## Status
+
+Fernboard is still under active development.
